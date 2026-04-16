@@ -4,6 +4,12 @@
 
 This project is an automated trading bot designed to execute trades based on predefined strategies, risk management rules, and continuous market monitoring. The goal was to build a system that can operate independently with minimal manual intervention while maintaining controlled risk exposure.
 
+## Project Structure
+
+- `src/main.py` - Main bot loop, MT5 connection, order execution, and dashboard output
+- `src/strategy.py` - Indicator calculations and signal generation logic
+- `src/config.py` - Trading, account, and risk configuration settings
+
 ## Features
 
 * Automated trade execution based on strategy signals
