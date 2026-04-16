@@ -1,5 +1,7 @@
 # AI Trading Bot
 
+> ⚠️ This project is for educational purposes only and does not constitute financial advice.
+> 
 ## Overview
 
 This project is an automated trading system designed to execute trades based on predefined strategies, risk management rules, and continuous market monitoring.
