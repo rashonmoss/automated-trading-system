@@ -5,9 +5,9 @@ import time
 import winsound
 
 # 1. ADD YOUR KEYS HERE
-account_id = 5047062035      # Your MT5 Login ID
-password = "_dHa0rSq"   # Your MT5 Password
-server = "MetaQuotes-Demo" # Your Server Name
+account_id = 000000     # Your MT5 Login ID
+password = "000000"   # Your MT5 Password
+server = "ABCDEFG" # Your Server Name
 
 # 2. Update the initialization to USE those keys
 if not mt5.initialize(login=account_id, password=password, server=server):
