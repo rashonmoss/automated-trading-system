@@ -2,35 +2,62 @@
 
 ## Overview
 
-This project is an automated trading bot designed to execute trades based on predefined strategies, risk management rules, and continuous market monitoring. The goal was to build a system that can operate independently with minimal manual intervention while maintaining controlled risk exposure.
+This project is an automated trading system designed to execute trades based on predefined strategies, risk management rules, and continuous market monitoring.
+
+The system is built to operate independently with minimal manual intervention while maintaining controlled risk exposure and consistent execution. It focuses on reliability, structured decision-making, and real-time responsiveness in a live trading environment.
+
+---
 
 ## Project Structure
 
-- `src/main.py` - Main bot loop, MT5 connection, order execution, and dashboard output
-- `src/strategy.py` - Indicator calculations and signal generation logic
-- `src/config.py` - Trading, account, and risk configuration settings
+- `src/main.py` - Main bot loop, MT5 connection, order execution, and runtime monitoring
+- `src/strategy.py` - Indicator calculations and signal generation logic (SMA, RSI)
+- `src/config.py` - Centralized configuration for account settings, risk management, and trading parameters
+
+---
 
 ## Features
 
-* Automated trade execution based on strategy signals
-* Risk management with stop loss and max daily loss thresholds
-* Continuous monitoring and re-entry logic after trade completion
-* Scalable structure for adding new strategies (scalping, trend-based)
+- Automated trade execution based on technical indicators (SMA + RSI)
+- Built-in risk management (stop loss, take profit, position control)
+- Continuous execution loop with real-time market monitoring
+- Trade state tracking (active positions, PnL visibility)
+- Modular structure allowing easy expansion of strategies
+
+---
+
+## How It Works
+
+1. Connects to MetaTrader 5 using account credentials
+2. Pulls historical market data at defined intervals
+3. Calculates indicators (SMA, RSI) using `pandas_ta`
+4. Evaluates trade conditions based on strategy rules
+5. Executes trades only if no active position exists
+6. Continuously monitors open trades and market conditions
+
+---
 
 ## Tech Stack
 
-* Python (core logic)
-* API integration (broker / market data)
-* Basic data analysis and signal processing
+- Python
+- MetaTrader5 API
+- Pandas
+- Pandas TA (technical analysis indicators)
+
+---
 
 ## What I Learned
 
-* Designing systems that run continuously without manual intervention
-* Handling edge cases like failed trades and reconnections
-* Structuring logic for reliability and repeatability in real-time environments
+- Designing systems that run continuously without manual intervention
+- Separating system components (execution, strategy, configuration)
+- Handling edge cases such as failed connections and data retrieval issues
+- Building structured logic for real-time decision-making systems
+
+---
 
 ## Future Improvements
 
-* Add backtesting engine for strategy validation
-* Implement logging and performance tracking dashboard
-* Integrate machine learning models for signal optimization
+- Add backtesting engine for validating strategies against historical data
+- Implement logging and monitoring for better observability
+- Introduce multi-strategy support (scalping, trend-following, etc.)
+- Integrate machine learning models for signal optimization
